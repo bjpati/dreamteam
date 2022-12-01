@@ -9,10 +9,10 @@
 const Stadion=require("../vuejs/stadionPresenter.js").default;
 
 export default function App (props) {
-  console.log(props)
   return (
     <div class="flexParent">
-      <div class = "stadion" ><Stadion model={props.model}/></div>
+       <div class = "stadion" ><Stadion model={props.model}/></div>
+    
     </div>
   )
 }
