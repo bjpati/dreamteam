@@ -48,6 +48,7 @@ function StadionView(props){
                 <button onClick={console.log("")}>
                 <span class="choosePlayer"> 
                 <img src={"#"}/>
+                <span class="playerName"></span>
                 </span>
                 </button> {props.players[index].name}
              </div>)
