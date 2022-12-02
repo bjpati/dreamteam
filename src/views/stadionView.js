@@ -2,30 +2,32 @@
 let i = 0;
 function StadionView(props){
 
-    return ( 
+    return (
         <div> 
-            <div class="title">
+            <h1 class="title">
             Your Dream Team
-            </div>
-         <div class="attacker"> 
-            <div class ="player10"> {showPlayerACB(10)}</div>
-            <div class ="player9"> {showPlayerACB(9)}</div>
-            <div class ="player8"> {showPlayerACB(8)}</div>
-         </div>
-        <div class ="midFilder">
-            <div class ="player7"> {showPlayerACB(7)}</div>
-            <div class ="player6"> {showPlayerACB(6)}</div>
-            <div class ="player5"> {showPlayerACB(5)}</div>
-        </div>
+            </h1>
+            <div class ="footballGround">
+                <div class="attacker"> 
+                    <div class ="player10"> {showPlayerACB(10)}</div>
+                    <div class ="player9"> {showPlayerACB(9)}</div>
+                    <div class ="player8"> {showPlayerACB(8)}</div>
+                </div>
+                <div class ="midFilder">
+                    <div class ="player7"> {showPlayerACB(7)}</div>
+                    <div class ="player6"> {showPlayerACB(6)}</div>
+                    <div class ="player5"> {showPlayerACB(5)}</div>
+                </div>
 
-        <div class ="defender">
-            <div class ="player4"> {showPlayerACB(4)}</div>
-            <div class ="player3"> {showPlayerACB(3)}</div>
-            <div class ="player2"> {showPlayerACB(2)}</div>
-            <div class ="player1"> {showPlayerACB(1)}</div>
+                <div class ="defender">
+                    <div class ="player4"> {showPlayerACB(4)}</div>
+                    <div class ="player3"> {showPlayerACB(3)}</div>
+                    <div class ="player2"> {showPlayerACB(2)}</div>
+                    <div class ="player1"> {showPlayerACB(1)}</div>
 
+                </div>
+                <div class = "goalKeeper"> {showPlayerACB(0)}</div>
         </div>
-        <div class = "goalKeeper"> {showPlayerACB(0)}</div>
 
         </div>
     
@@ -37,7 +39,7 @@ function StadionView(props){
                 return (<div> 
                 <button onClick={searchPlayerACB}>
                 <span class="choosePlayer"> 
-                <img src={"https://png.pngtree.com/png-vector/20190120/ourmid/pngtree-add-vector-icon-png-image_470700.jpg"}/>
+                <img src={"https://png.pngtree.com/png-vector/20190120/ourmid/pngtree-add-vector-icon-png-image_470700.jpg"}height="50" width="50"/>
                 </span>
                 </button> 
              </div>)

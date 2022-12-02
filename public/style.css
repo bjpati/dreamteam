@@ -1,0 +1,51 @@
+
+
+.footballGround{
+    border-width: 5px;
+    border-style: solid;
+    
+    
+}
+
+.title {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 10px;
+    border-width: 5px;
+    border-style: solid;
+}
+.attacker{
+    display: flex;                  /* establish flex container */
+    flex-direction: row;            /* default value; can be omitted */
+    flex-wrap: nowrap;              /* default value; can be omitted */
+    justify-content: space-between; /* switched from default (flex-start, see below) */
+    
+  
+}
+.midFilder{
+    display: flex;                  /* establish flex container */
+    flex-direction: row;            /* default value; can be omitted */
+    flex-wrap: nowrap;              /* default value; can be omitted */
+    justify-content: space-between; /* switched from default (flex-start, see below) */
+    
+}
+.defender{
+    display: flex;                  /* establish flex container */
+    flex-direction: row;            /* default value; can be omitted */
+    flex-wrap: nowrap;              /* default value; can be omitted */
+    justify-content: space-between;
+
+}
+.goalKeeper{
+    float:center;
+}
+
+.choosePlayer{
+    max-height: 20px;
+    max-width: 20px;
+}
+
+
+
+
+
