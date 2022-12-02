@@ -1,10 +1,17 @@
 
 
 .footballGround{
+    justify-content: center;
+    width: fit-content;
+    margin: auto;
+
     border-width: 5px;
     border-style: solid;
-    
-    
+    width: 500px;
+    background-image: url("https://i.pinimg.com/originals/5a/1d/70/5a1d70b69472332ca2021b5699d32637.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 700px;
 }
 
 .title {
@@ -15,6 +22,10 @@
     border-style: solid;
 }
 .attacker{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 30%;
+
     display: flex;                  /* establish flex container */
     flex-direction: row;            /* default value; can be omitted */
     flex-wrap: nowrap;              /* default value; can be omitted */
@@ -23,6 +34,9 @@
   
 }
 .midFilder{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
     display: flex;                  /* establish flex container */
     flex-direction: row;            /* default value; can be omitted */
     flex-wrap: nowrap;              /* default value; can be omitted */
@@ -30,6 +44,9 @@
     
 }
 .defender{
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 10%;
     display: flex;                  /* establish flex container */
     flex-direction: row;            /* default value; can be omitted */
     flex-wrap: nowrap;              /* default value; can be omitted */
@@ -37,7 +54,8 @@
 
 }
 .goalKeeper{
-    float:center;
+    margin-left: 47%;
+    margin-top: 12%;
 }
 
 .choosePlayer{

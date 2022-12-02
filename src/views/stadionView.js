@@ -1,13 +1,14 @@
 /* eslint-disable */
 let i = 0;
 function StadionView(props){
-
     return (
         <div> 
             <h1 class="title">
             Your Dream Team
             </h1>
-            <div class ="footballGround">
+            <div class ="footballGround" >
+
+                
                 <div class="attacker"> 
                     <div class ="player10"> {showPlayerACB(10)}</div>
                     <div class ="player9"> {showPlayerACB(9)}</div>
@@ -39,7 +40,7 @@ function StadionView(props){
                 return (<div> 
                 <button onClick={searchPlayerACB}>
                 <span class="choosePlayer"> 
-                <img src={"https://png.pngtree.com/png-vector/20190120/ourmid/pngtree-add-vector-icon-png-image_470700.jpg"}height="50" width="50"/>
+                <img src={"https://png.pngtree.com/png-vector/20190120/ourmid/pngtree-add-vector-icon-png-image_470700.jpg"}height="100"/>
                 </span>
                 </button> 
              </div>)
