@@ -38,9 +38,9 @@ function StadionView(props){
         function showPlayerACB(index){
             if (!props.players[index]){
                 return (<div> 
-                <button onClick={searchPlayerACB}>
+                <button class="choosePlayerButton" onClick={searchPlayerACB}>
                 <span class="choosePlayer"> 
-                <img src={"https://png.pngtree.com/png-vector/20190120/ourmid/pngtree-add-vector-icon-png-image_470700.jpg"}height="100"/>
+                <img class="addImage"src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcMn89o80Kkq3OvFtkibG0X9JEdT3fx-aLnA&usqp=CAU"}/>
                 </span>
                 </button> 
              </div>)

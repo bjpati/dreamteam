@@ -61,9 +61,32 @@
 .choosePlayer{
     max-height: 20px;
     max-width: 20px;
+    border-radius: 50%;
+
+
 }
 
 
+.addImage{
+    height:100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: transparent;
+   
+
+}
+.choosePlayerButton{
+    border-radius: 50%;
+    background-color: transparent;
+    border-style: hidden;
+   
 
 
+}
 
+.choosePlayerButton:active {
+    
+    opacity: 0.5;
+
+
+}
