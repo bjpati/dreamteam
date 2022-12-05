@@ -1,0 +1,92 @@
+
+
+.footballGround{
+    justify-content: center;
+    width: fit-content;
+    margin: auto;
+
+    border-width: 5px;
+    border-style: solid;
+    width: 500px;
+    background-image: url("https://i.pinimg.com/originals/5a/1d/70/5a1d70b69472332ca2021b5699d32637.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+
+.title {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 10px;
+    border-width: 5px;
+    border-style: solid;
+}
+.attacker{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 30%;
+
+    display: flex;                  /* establish flex container */
+    flex-direction: row;            /* default value; can be omitted */
+    flex-wrap: nowrap;              /* default value; can be omitted */
+    justify-content: space-between; /* switched from default (flex-start, see below) */
+    
+  
+}
+.midFilder{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    display: flex;                  /* establish flex container */
+    flex-direction: row;            /* default value; can be omitted */
+    flex-wrap: nowrap;              /* default value; can be omitted */
+    justify-content: space-between; /* switched from default (flex-start, see below) */
+    
+}
+.defender{
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 10%;
+    display: flex;                  /* establish flex container */
+    flex-direction: row;            /* default value; can be omitted */
+    flex-wrap: nowrap;              /* default value; can be omitted */
+    justify-content: space-between;
+
+}
+.goalKeeper{
+    margin-left: 47%;
+    margin-top: 12%;
+}
+
+.choosePlayer{
+    max-height: 20px;
+    max-width: 20px;
+    border-radius: 50%;
+
+
+}
+
+
+.addImage{
+    height:100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: transparent;
+   
+
+}
+.choosePlayerButton{
+    border-radius: 50%;
+    background-color: transparent;
+    border-style: hidden;
+   
+
+
+}
+
+.choosePlayerButton:active {
+    
+    opacity: 0.5;
+
+
+}
