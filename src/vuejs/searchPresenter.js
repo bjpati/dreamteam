@@ -4,6 +4,7 @@ import {searchPlayers} from "../searchPlayers";
 import promiseNoData from "../views/promiseNoData";
 import SearchFormView from "../views/searchFormView";
 import SearchResultsView from "../views/searchResultsView";
+import {leagues} from "../league";
 const Search={ 
     props: ["model"],
     
@@ -20,6 +21,10 @@ const Search={
            
             resolvePromise(searchPlayers({ league:this.setLeague, search:this.setSearch}),this.searchResultsPromiseState);
          },
+
+        updateChooseLeagueACB(league){
+            this.setLeague = league.id;
+        }
         // updateSearchResult(player){
         //     this.message.setCurrentPlayer(player.id);
         //  }    
@@ -28,9 +33,10 @@ const Search={
         resolvePromise(searchPlayers({}),this.searchResultsPromiseState);
     },
     render(){ 
-        return    (<div><SearchFormView 
+        return    (<div><SearchFormView league = {leagues} 
         onSearchText={this.updateSearchTextACB}  
-        onDoSearch={this.updateDoSearch}/>
+        onDoSearch={this.updateDoSearch}
+        onTypeChoose={this.updateChooseLeagueACB}/>
         {promiseNoData(this.searchResultsPromiseState)|| <SearchResultsView 
         searchResults={this.searchResultsPromiseState.data} 
        />}</div>);
