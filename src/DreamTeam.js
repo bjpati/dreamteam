@@ -22,7 +22,28 @@ class DreamTeam {
 
 
     this.players = [player, player1];
+    this.searchResultsPromiseState={};
+    this.searchParams={};
+    this.currentDishPromiseState={};
   }
+
+
+addObserver(callback) {
+    this.observers=[...this.observers,callback];
+}
+removeObserver(callback){
+this.observers= this.observers.filter(checkCallback); 
+function checkCallback(cb){
+  return  cb!==callback;
+}
+}
+
+notifyObservers(payload){
+    try{     
+   this.observers.forEach(function invokeObserverCB(obs){obs(payload);})
+}
+    catch(err){console.error(err); } 
+}
 
   addToTeam(playerToAdd) {
     if (this.players.find(findPlayerCB)) {
@@ -63,12 +84,33 @@ function findPlayerCB(player) {
 
   setCurrentPlayer(id){
 
-    if(id && id!==this.currentPlayerId){
-      this.currentPlayerId=id;
-    }
+    function notifyACB(){
+      this.notifyObservers(); 
+      }
+
+  if(id && id!==this.currentPlayerId){
+  this.currentPlayerId = id;
+  this.notifyObservers({dishId:id});
+  //resolvePromise(getDishDetails(id),this.currentDishPromiseState, notifyACB.bind(this));
+
+
+  }
+
   }
 
 
+  setSearch(name){
+    this.searchParams.search=name;
+ }
+
+ doSearch(search){
+
+  function notifyACB(){
+    this.notifyObservers(); 
+    }
+
+    resolvePromise(searchPlayers(search), this.searchResultsPromiseState, notifyACB.bind(this));
+  }
 
 }
 
