@@ -12,15 +12,15 @@ We will fix the search sidebar that is shown on the left side of the home page. 
 
 ## Project file structure
 
-###  DreamTeam 
+####  DreamTeam 
 The DreamTeam will represent the data in the project. For instance, it contains all the players the user has chosen to be in the team in the project.  In the addition, the file contains important functions that will be needed when we deal with the data. For instance, the function addToTeam(player).
 
-### StadionPresenter & StadionView
+#### StadionPresenter & StadionView
 
 These two files are connected with each other where in presents there are, among other things, various callbacks that are called to retrieve data from the App. We then send this data to View to be able to display it. You can summarize it to a link that sends data and information from App to View via Presenter.
 
 
-### SearchPlayers
+#### SearchPlayers
 This file is the most important in the whole project because here we work with the API. The file contains a main function "myAPICall" which first checks the response status and that it is 200. Then a fetch is made to process the "Base URL" and endpoint that is retrieved from the API.
 
 ## Project setup
