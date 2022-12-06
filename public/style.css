@@ -12,6 +12,11 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 700px;
+    display: inline-block;
+    
+
+    
+    
 }
 
 .title {
@@ -88,5 +93,21 @@
     
     opacity: 0.5;
 
+}
+.searchSideBar{
+    padding: 5px;
+  
+    border-width: 5px;
+    border-style: solid;
+    display: inline-block;
+    
 
+}
+
+.flexParent{
+    display: inline-block;
+    display:flex;
+    height: 90vh;
+    flex-wrap: wrap;
+    width: 100%;
 }

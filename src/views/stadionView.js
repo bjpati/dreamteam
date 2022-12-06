@@ -3,11 +3,8 @@ let i = 0;
 function StadionView(props){
     return (
         <div> 
-            <h1 class="title">
-            Your Dream Team
-            </h1>
-            <div class ="footballGround" >
 
+            <div class ="footballGround" >
                 
                 <div class="attacker"> 
                     <div class ="player10"> {showPlayerACB(10)}</div>
