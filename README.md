@@ -12,7 +12,9 @@ We will fix the search sidebar that is shown on the left side of the home page. 
 
 ## project file structure
 
-###  test
+###  DreamTeam 
+The DreamTeam will represent the data in the project. For instance, it contains all the players the user has chosen to be in the team in the project.  In the addition, the file contains important functions that will be needed when we deal with the data. For instance, the function addToTeam(player).
+
 ## Project setup
 ```
 npm install
