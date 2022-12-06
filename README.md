@@ -19,6 +19,8 @@ The DreamTeam will represent the data in the project. For instance, it contains 
 
 These two files are connected with each other where in presents there are, among other things, various callbacks that are called to retrieve data from the App. We then send this data to View to be able to display it. You can summarize it to a link that sends data and information from App to View via Presenter.
 
+#### SearchResultsView & SearchFormView & searchPresenter
+The purpose of these files is to handle the search process. The search process makes that the user will be able to search for a player. In the presenter, we have the functions that we need to make the search process works such as fetching what the user wrote in the search field and sending it to the API to get the result. In the SearchResultsView and SearchFormView we will display what we want the user to see. 
 
 #### SearchPlayers
 This file is the most important in the whole project because here we work with the API. The file contains a main function "myAPICall" which first checks the response status and that it is 200. Then a fetch is made to process the "Base URL" and endpoint that is retrieved from the API.
