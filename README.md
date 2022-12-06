@@ -10,6 +10,7 @@ Until know we have deployed the App and can extract data from the API. We have c
 
 We will fix the search sidebar that is shown on the left side of the home page. And the information sidebar that is shown on the right side of the page and provides the player's information. In addtion, we should creaet the login/ signup app side and save the user data in the database using the firebase real-time database
 
+###  test
 ## Project setup
 ```
 npm install
