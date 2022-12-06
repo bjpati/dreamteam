@@ -1,4 +1,5 @@
 # dreamteam
+## About dreamTeam
 
 ## Project setup
 ```
