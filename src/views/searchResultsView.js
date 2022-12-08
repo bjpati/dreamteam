@@ -6,20 +6,18 @@ function SearchResultsView(props) {
     function playerACB(player){
     return (
 
-        <div>
-        
-          <img class="imageResult" src={player.player.photo} height="50"/> 
-          <div>{player.player.name} </div>
-        </div>
+        <div class="searchResults">
+          <img class="imageResult" src={player.player.photo}/> 
+          <div class="playerName">{player.player.name} </div>
+        </div>  
     )
     }
-
 
     return(
         <div class="SerachResultArray" >
               {props.searchResults.map(playerACB)}
 
-        </div>
+        </div>           
     ); 
 }
 export default SearchResultsView;

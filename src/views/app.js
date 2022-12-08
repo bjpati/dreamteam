@@ -11,10 +11,14 @@ const Search=require("../vuejs/searchPresenter.js").default;
 
 export default function App (props) {
   return (
+    <div>
+    <h1 class="title">Your Dream Team</h1>
     <div class="flexParent">
+      <div><Search model={props.model}/></div>
        <div class = "stadion" ><Stadion model={props.model}/></div>
-       <div class = "" ><Search model={props.model}/></div>
+       <div class="playerInformation"></div>
     
+    </div>
     </div>
   )
 }

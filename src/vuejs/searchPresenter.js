@@ -33,7 +33,8 @@ const Search={
         resolvePromise(searchPlayers({}),this.searchResultsPromiseState);
     },
     render(){ 
-        return    (<div><SearchFormView league = {leagues} 
+        
+        return  (<div class = "searchSideBar"><SearchFormView league = {leagues} 
         onSearchText={this.updateSearchTextACB}  
         onDoSearch={this.updateDoSearch}
         onTypeChoose={this.updateChooseLeagueACB}/>

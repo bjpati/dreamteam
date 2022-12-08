@@ -12,6 +12,11 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 700px;
+    display: inline-block;
+    
+
+    
+    
 }
 
 .title {
@@ -41,6 +46,7 @@
     flex-direction: row;            /* default value; can be omitted */
     flex-wrap: nowrap;              /* default value; can be omitted */
     justify-content: space-between; /* switched from default (flex-start, see below) */
+
     
 }
 .defender{
@@ -88,5 +94,42 @@
     
     opacity: 0.5;
 
+}
+.searchSideBar{
+    padding: 5px;
+    width: 420px;
+    border-width: 5px;
+    border-style: solid;
+    display: inline-block;
+    margin-right:5px;
+}
+.flexParent{
+    display: inline-block;
+    display:flex;
+    height: 90vh;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.searchResults{
+
+    margin: 5px;
+    width: 30%;
+    margin-left:30%;
+    display: center;
+
+
+}
+.imageResult{
+    margin-top:5px;
+  
+    height: 60px;
+    border-radius: 50%;
+    border-width: 3px;
+    border-style: solid;
+
+}
+.playerName{
+    border-width: 5px;
+    border-style: solid;
 
 }
