@@ -6,9 +6,9 @@ function SearchResultsView(props) {
     function playerACB(player){
     return (
 
-        <div>
-          <img class="imageResult" src={player.player.photo} height="50"/> 
-          <div>{player.player.name} </div>
+        <div class="searchResults">
+          <img class="imageResult" src={player.player.photo}/> 
+          <div class="playerName">{player.player.name} </div>
         </div>  
     )
     }
