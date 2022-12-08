@@ -1,30 +1,29 @@
 /* eslint-disable */
 class DreamTeam {
-  constructor(currentPlayerId) {
+  constructor(currentPlayerId, searchPointer) {
     this.observers = []
-    const player = {id:"6cb7dbe26a2d56b",
-    name:"Nicolas Colazo",
-    country:"AR",
-    birth_date:"1990-07-08",
-    foot:"Left",
-    height:"175 cm",
-    has_image:false};
+    this.searchPointer=0;
+    // const player = {id:"6cb7dbe26a2d56b",
+    // name:"Nicolas Colazo",
+    // country:"AR",
+    // birth_date:"1990-07-08",
+    // foot:"Left",
+    // height:"175 cm",
+    // has_image:false};
 
-    const player1 = {id:"4ab7dbe26a2d56b",
-    name:"Lionell messi",
-    country:"AR",
-    birth_date:"1993-03-08",
-    foot:"right",
-    height:"170 cm",
-    has_image:true}
+    // const player1 = {id:"4ab7dbe26a2d56b",
+    // name:"Lionell messi",
+    // country:"AR",
+    // birth_date:"1993-03-08",
+    // foot:"right",
+    // height:"170 cm",
+    // has_image:true}
 
-
-
-
-    this.players = [player, player1];
+    
+    this.players = [];
     this.searchResultsPromiseState={};
     this.searchParams={};
-    this.currentDishPromiseState={};
+    this.currentPlayerPromiseState={};
   }
 
 
@@ -46,12 +45,18 @@ notifyObservers(payload){
 }
 
   addToTeam(playerToAdd) {
-    if (this.players.find(findPlayerCB)) {
-      return;
-    }
+    // if (this.players.find(findPlayerCB)) {
+    //   return;
+    // }
 
-    this.players= [...this.players, playerToAdd]
+    
+   //this.players=[...this.players, playerToAdd];
+   console.log("test dreamteam");
+   console.log(this.searchPointer);
+   this.players[this.searchPointer]=playerToAdd;
 
+   
+    
     function findPlayerCB(player) {
       return player.id === playerToAdd.id
     }
@@ -81,17 +86,22 @@ function findPlayerCB(player) {
 
   }
 
+ changeIndex(index) {
+ this.searchPointer=index;
+  
+ } 
+
 
   setCurrentPlayer(id){
 
-    function notifyACB(){
+   /* function notifyACB(){
       this.notifyObservers(); 
-      }
+      }*/
 
   if(id && id!==this.currentPlayerId){
   this.currentPlayerId = id;
-  this.notifyObservers({dishId:id});
-  //resolvePromise(getDishDetails(id),this.currentDishPromiseState, notifyACB.bind(this));
+  //this.notifyObservers({dishId:id});
+  
 
 
   }

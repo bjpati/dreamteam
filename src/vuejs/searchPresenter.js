@@ -24,10 +24,15 @@ const Search={
 
         updateChooseLeagueACB(league){
             this.setLeague = league.id;
-        }
+        },
+        testACB(player){
+            this.message.addToTeam(player);
+         }
         // updateSearchResult(player){
         //     this.message.setCurrentPlayer(player.id);
-        //  }    
+        //  } 
+        
+       
      },
      created(){
         resolvePromise(searchPlayers({}),this.searchResultsPromiseState);
@@ -40,6 +45,7 @@ const Search={
         onTypeChoose={this.updateChooseLeagueACB}/>
         {promiseNoData(this.searchResultsPromiseState)|| <SearchResultsView 
         searchResults={this.searchResultsPromiseState.data} 
+        choosePlayer={this.testACB}
        />}</div>);
 },
     };

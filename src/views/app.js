@@ -8,6 +8,7 @@
 
 const Stadion=require("../vuejs/stadionPresenter.js").default;
 const Search=require("../vuejs/searchPresenter.js").default;
+const Details=require("../vuejs/detailsPresenter.js").default;
 
 export default function App (props) {
   return (
@@ -16,7 +17,7 @@ export default function App (props) {
     <div class="flexParent">
       <div><Search model={props.model}/></div>
        <div class = "stadion" ><Stadion model={props.model}/></div>
-       <div class="playerInformation"></div>
+       <div class="playerInformation"><Details model={props.model}/> </div>
     
     </div>
     </div>
