@@ -2,7 +2,7 @@
 import { API_KEY, BASE_URL } from "./apiConfig";
 
 function searchPlayers(params) {
-    console.log(params)
+    //(params)
    return myAPICall(new URLSearchParams(params)).then(transformSearchResultACB);
 }
 

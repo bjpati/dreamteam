@@ -32,6 +32,8 @@ function StadionView(props){
     
     )
 
+   
+
         function showPlayerACB(index){
             if (!props.players[index]){
                 return (<div> 
@@ -41,24 +43,31 @@ function StadionView(props){
                 </span>
                 </button> 
              </div>)
-            }
-            
-            else 
-            return (<div> 
-                <button onClick={console.log("")}>
+            }else 
+            return (<div>
+                {console.log("hasan")}
+                {console.log(props.players)} 
+                <button class="choosePlayerButton" onClick={console.log("")}>
                 <span class="choosePlayer"> 
-                <img src={"#"}/>
-                <span class="playerName"></span>
+                <img class="addImage"src={props.players[index].player.photo}/>
+
                 </span>
-                </button> {props.players[index].name}
+                </button> 
              </div>)
+
+
+
+        function searchPlayerACB(){
+            props.changePointer(index);
+            //test(index);
+
+                  
+}
             
             
         }
 //nevigation to the result in the sidebar
-        function searchPlayerACB(){
-            console.log(i++);
-        }
+        
     }
 
 
