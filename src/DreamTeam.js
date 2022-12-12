@@ -1,25 +1,8 @@
 /* eslint-disable */
 class DreamTeam {
-  constructor(currentPlayerId, searchPointer) {
+  constructor(currentPlayerId, searchPointer, detailsPointer) {
     this.observers = []
-    this.searchPointer=0;
-    // const player = {id:"6cb7dbe26a2d56b",
-    // name:"Nicolas Colazo",
-    // country:"AR",
-    // birth_date:"1990-07-08",
-    // foot:"Left",
-    // height:"175 cm",
-    // has_image:false};
-
-    // const player1 = {id:"4ab7dbe26a2d56b",
-    // name:"Lionell messi",
-    // country:"AR",
-    // birth_date:"1993-03-08",
-    // foot:"right",
-    // height:"170 cm",
-    // has_image:true}
-
-    
+    this.searchPointer=0;    
     this.players = [];
     this.searchResultsPromiseState={};
     this.searchParams={};
@@ -88,8 +71,11 @@ function findPlayerCB(player) {
 
  changeIndex(index) {
  this.searchPointer=index;
-  
  } 
+
+ setPlayerDetails(index){
+   this.detailsPointer = index;
+ }
 
 
   setCurrentPlayer(id){

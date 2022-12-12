@@ -1,4 +1,5 @@
 /* eslint-disable */
+
 let i = 0;
 function StadionView(props){
     return (
@@ -32,8 +33,6 @@ function StadionView(props){
     
     )
 
-   
-
         function showPlayerACB(index){
             if (!props.players[index]){
                 return (<div> 
@@ -47,7 +46,7 @@ function StadionView(props){
             return (<div>
                 {console.log("hasan")}
                 {console.log(props.players)} 
-                <button class="choosePlayerButton" onClick={console.log("")}>
+                <button class="choosePlayerButton" onClick={viewDetailsACB}>
                 <span class="choosePlayer"> 
                 <img class="addImage"src={props.players[index].player.photo}/>
 
@@ -59,15 +58,18 @@ function StadionView(props){
 
         function searchPlayerACB(){
             props.changePointer(index);
+            window.location.hash = "#serach";
             //test(index);
 
                   
 }
-            
+            function viewDetailsACB(){
+                props.showPointet(index);
+                window.location.hash = "#details";
+            }
             
         }
-//nevigation to the result in the sidebar
-        
+
     }
 
 
