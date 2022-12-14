@@ -9,17 +9,29 @@
 const Stadion=require("../vuejs/stadionPresenter.js").default;
 const Search=require("../vuejs/searchPresenter.js").default;
 const Details=require("../vuejs/detailsPresenter.js").default;
+const Show = require("../vuejs/show.js").default;
+function hashCB(){
+  window.location.hash="#stadion"
+}
+
+if ( (window.location.hash !=="#stadion")
+|| (window.location.hash !=="#search")|| 
+(window.location.hash !=="#details"))
+    window.location.hash = "#login"
 
 export default function App (props) {
-  return (
-    <div>
-    <h1 class="title">Your Dream Team</h1>
-    <div class="flexParent">
-      <div><Search model={props.model}/></div>
-       <div class = "stadion" ><Stadion model={props.model}/></div>
-       <div class="playerInformation"><Details model={props.model}/> </div>
-    
-    </div>
-    </div>
-  )
+
+
+    return (
+      <div>
+      <h1 class="title">Your Dream Team</h1>
+      <div class="flexParent">
+        <Show hash="#login"><button onClick={hashCB}>login</button></Show>
+            <Show class = "stadion" hash="#stadion"><Stadion model={props.model}/></Show>
+            <Show hash="#search"><Search model={props.model} /></Show>
+            <Show hash="#details" class="playerInformation"><Details model={props.model} /></Show>
+      </div>
+      </div>
+    )
+  
 }

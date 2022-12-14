@@ -12,7 +12,7 @@ function Stadion (props) {
   setCurrentPlayer={onSetCurrentPalyerACB}
   indexPointer={props.model.searchPointer}
   changePointer={testchangeACB}
-
+  showPointet={showDetailsACB}
   />
 
   function testchangeACB(index){
@@ -26,6 +26,10 @@ function Stadion (props) {
   function onSetCurrentPalyerACB (id) {
     props.model.setCurrentPlayer(id)
   } 
+
+  function showDetailsACB(index){
+    props.model.setPlayerDetails(index);
+  }
 }
 
 export default Stadion;
