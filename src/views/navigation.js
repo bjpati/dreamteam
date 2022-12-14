@@ -1,8 +1,6 @@
 /* eslint-disable */
 
-if (!["#stadion", "#search", "#details"].find(findHashCB))
-        window.location.hash = "#stadion";
-
-function findHashCB(){
-    window.location.hash;
-}
+if ( (window.location.hash !=="#stadion")
+|| (window.location.hash !=="#search")|| 
+(window.location.hash !=="#details") ||(window.location.hash)==="" )
+        window.location.hash = "#login";

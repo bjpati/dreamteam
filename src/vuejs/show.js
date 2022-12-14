@@ -1,22 +1,25 @@
 /* eslint-disable */
 
-const Show={  
-    props:["hash"],  
+const Show={
+    props:["hash"],
     data(){ return {hashState: window.location.hash}; }, //  copy the value in component state
-    methods:{
-        someACB(){
-            this.hashState = window.location.hash;
+        methods:{
+        hashListenerACB(){ this.hashState= window.location.hash; },//    when notified, update state with current value
+        checkThehashState(){
+            if (this.hashState!==this.hash)
+                return false; 
+            if (this.hashState===this.hash)
+                return true; 
         }
     },
-    created(){   //    1: The component has been created    
-          window.addEventListener("hashchange", this.someACB);
-    },
-    unmounted(){   //  2: The component is being taken down
-        window.removeEventListener("hashchange", this.someACB);
-    },
-    render(){
-        return <div class ={(this.hashState === this.hash)?"":"hidden"}>{this.$slots.default()}</div>
-    },
-    };
+        created(){   //    1: The component has been created
+              window.addEventListener("hashchange", this.hashListenerACB);
+        },
+        unmounted(){   //  2: The component is being taken down
+            window.removeEventListener("hashchange",  this.hashListenerACB);
+        }
+        ,
+    render(){return<div class= {(this.checkThehashState())?"":"hidden"}>{this.$slots.default()}</div>},
+     };
+    export default Show;
     
-export default Show;

@@ -1,6 +1,5 @@
 /* eslint-disable */
 
-let i = 0;
 function StadionView(props){
     return (
         <div> 
@@ -42,7 +41,9 @@ function StadionView(props){
                 </span>
                 </button> 
              </div>)
-            }else 
+            }
+            
+            else 
             return (<div>
                 {console.log("hasan")}
                 {console.log(props.players)} 
@@ -56,13 +57,13 @@ function StadionView(props){
 
 
 
-        function searchPlayerACB(){
+          function searchPlayerACB(){
             props.changePointer(index);
-            window.location.hash = "#serach";
+            window.location.hash = "#search";
             //test(index);
 
                   
-}
+          }
             function viewDetailsACB(){
                 props.showPointet(index);
                 window.location.hash = "#details";
