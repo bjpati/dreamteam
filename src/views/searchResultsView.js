@@ -8,6 +8,7 @@ function SearchResultsView(props) {
             // console.log("hasan");
             console.log(player);
             props.choosePlayer(player);
+            window.location.hash = "#stadion";
           }
    
     return (
