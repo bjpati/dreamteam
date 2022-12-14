@@ -50,7 +50,8 @@ notifyObservers(payload){
       return;
     }
 
-    this.players= [...this.players, playerToAdd]
+    this.players= [...this.players, playerToAdd];
+    this.notifyObservers({addPlayer: playerToAdd});
 
     function findPlayerCB(player) {
       return player.id === playerToAdd.id
