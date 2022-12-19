@@ -1,11 +1,7 @@
 /* eslint-disable */
 import StadionView from '../views/stadionView.js'
 
-
 function Stadion (props) {
- 
-  {console.log("stadion presenter props")}
-  {console.log(props)}
   return <StadionView 
   players = {props.model.players}
   remove ={onRemovePlayerACB} 

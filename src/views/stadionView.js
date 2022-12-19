@@ -45,14 +45,12 @@ function StadionView(props){
             
             else 
             return (<div>
-                {console.log("hasan")}
-                {console.log(props.players)} 
-                <button class="choosePlayerButton" onClick={viewDetailsACB}>
+                <button class="choosePlayerButton" onClick={viewDetailsACB} onDragend={viewSerachACB}>
                 <span class="choosePlayer"> 
                 <img class="addImage"src={props.players[index].player.photo}/>
-
                 </span>
                 </button> 
+                
              </div>)
 
 
@@ -67,6 +65,11 @@ function StadionView(props){
             function viewDetailsACB(){
                 props.showPointet(index);
                 window.location.hash = "#details";
+            }
+
+            function viewSerachACB(){
+                props.changePointer(index);
+                window.location.hash = "#search";
             }
             
         }
