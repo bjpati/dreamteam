@@ -26,6 +26,9 @@ These files are used to display player details retrieved from the API. The API o
 #### firebaseModel
 In the firebaseModel we have the functions that handle the firebase. FirebaseModelPromise() will be used to get the information from the firebase and will be called every time a user signs in to the page. UpdateFirebaseFromModel(model) will be used to save the player that has been added to the team and will be called when the user adds a player to the team.
 
+#### SignInView & SignUpView & SignInPresenter
+In these files, we create the functions and other code that will need so a user will able to sign up and sign in on the page.  
+
 ## Project setup
 ```
 npm install
