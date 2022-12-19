@@ -1,5 +1,5 @@
 # dreamteam
-<img width="587" alt="Screenshot 2022-12-19 at 16 41 33" src="https://user-images.githubusercontent.com/102171209/208463898-f176c512-39c1-41b9-bc02-989877e323a5.png">
+![Screenshot 2022-12-19 at 17 03 08](https://user-images.githubusercontent.com/102171209/208468307-c41000e8-105e-46a7-8d73-c9389c22e422.png)
 
 
 ## About dreamTeam
