@@ -149,6 +149,14 @@
   padding: 16px;
   margin-top:50px;
   margin-left: 550px;
+  justify-content: center;
+    width: fit-content;
+    margin: auto;
+    width: 500px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 700px;
+  display: center;
   }
   
 .avatar{
