@@ -1,12 +1,15 @@
 /* eslint-disable */
+
+
 class DreamTeam {
-  constructor(currentPlayerId, searchPointer, detailsPointer) {
+  constructor(playersArray = []) {
     this.observers = []
-    this.searchPointer=0;    
-    this.players = [];
+    this.searchPointer=0;   
+    this.players = playersArray;
     this.searchResultsPromiseState={};
-    this.searchParams={};
-    this.currentPlayerPromiseState={};
+    this.currentPlayerId = 0;
+    this.detailsPointer = 0;
+    //this.currentPlayerPromiseState={};
   }
 
 
@@ -28,21 +31,29 @@ notifyObservers(payload){
 }
 
   addToTeam(playerToAdd) {
-    // if (this.players.find(findPlayerCB)) {
+   // console.log("test10000");
+    //console.log(playerToAdd.player);
+    //  if (this.players.find(findPlayerCB)) {
     //   return;
-    // }
-
+    //   }
+/*
+     function findPlayerCB(player) {
+      console.log(player);
+      return player.id === playerToAdd.id;
+    }*/
     
-   //this.players=[...this.players, playerToAdd];
-   console.log("test dreamteam");
-   console.log(this.searchPointer);
-   this.players[this.searchPointer]=playerToAdd;
-
-   
-    
-    function findPlayerCB(player) {
-      return player.id === playerToAdd.id
+    /*let x = 1;
+    for(let i =0; i<11; i++){
+      if(this.players[i]){
+        if(this.players[i].player.id===playerToAdd.id)
+        x=0;
+      }
     }
+   if(x===1){ */
+   this.players[this.searchPointer]= playerToAdd;
+   this.notifyObservers({addPlayer:playerToAdd});
+  
+    //console.log(this.players);
   }
 
 
@@ -73,6 +84,10 @@ function findPlayerCB(player) {
  this.searchPointer=index;
  } 
 
+ getPlayerFromFirebase(players){
+   this.players = players;
+ }
+
  setPlayerDetails(index){
    this.detailsPointer = index;
  }
@@ -84,29 +99,12 @@ function findPlayerCB(player) {
       this.notifyObservers(); 
       }*/
 
-  if(id && id!==this.currentPlayerId){
-  this.currentPlayerId = id;
-  //this.notifyObservers({dishId:id});
-  
-
-
-  }
-
-  }
-
-
-  setSearch(name){
-    this.searchParams.search=name;
- }
-
- doSearch(search){
-
-  function notifyACB(){
-    this.notifyObservers(); 
+    if(id && id!==this.currentPlayerId){
+    this.currentPlayerId = id;
+    //this.notifyObservers({dishId:id});
     }
-
-    resolvePromise(searchPlayers(search), this.searchResultsPromiseState, notifyACB.bind(this));
   }
+ 
 
 }
 

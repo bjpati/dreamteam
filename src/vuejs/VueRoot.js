@@ -1,5 +1,11 @@
+/* eslint-disable */
+
 import DreamTeam from '@/DreamTeam.js'
 import App from '../views/app.js'
+import { firebaseModelPromise, updateFirebaseFromModel } from "../firebaseModel";
+import resolvePromise from "../resolvePromise.js";
+import promiseNoData from "../views/promiseNoData";
+
 
 /**
  * Here define the component VueRoot.
@@ -11,12 +17,23 @@ const VueRoot = {
   data () {
     return { rootModel: this.model, promiseState: {} }
   },
-  created () {},
-  methods: {},
+  created () {
+    this.promiseState.data = new DreamTeam();
+    /*if(!this.promiseState.promise){
+      resolvePromise(firebaseModelPromise(), this.promiseState, this.notifyACB);
+  }*/
+  //firebaseModelPromise()
+   this.notifyACB();
+  },
+  methods: {
+    notifyACB(){
+        updateFirebaseFromModel(this.promiseState.data);
+  }
+  },
 
   render () {
-    this.promiseState.data = new DreamTeam()
-    return <App model={this.promiseState.data} />
+    
+    return  <App model={this.promiseState.data} />
   }
 }
 
