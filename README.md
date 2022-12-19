@@ -17,8 +17,17 @@ These two files are connected with each other where in presents there are, among
 #### SearchPlayers
 This file is the most important in the whole project because here we work with the API. The file contains a main function "myAPICall" which first checks the response status and that it is 200. Then a fetch is made to process the "Base URL" and endpoint that is retrieved from the API.
 
-#### SearchResultsView & SearchFormView & searchPresenter
+#### SearchResultsView & SearchFormView & SearchPresenter
 The purpose of these files is to handle the search process. The search process makes that the user will be able to search for a player. In the presenter, we have the functions that we need to make the search process works such as fetching what the user wrote in the search field and sending it to the API to get the result. In the SearchResultsView and SearchFormView we will display what we want the user to see. 
+
+#### DetialsView & DetialsPresenter
+These files are used to display player details retrieved from the API. The API offers many details but the group decided to show the ones they feel are important to a user. In the same way as searchResultsView, searchFormView and searchPresenter, we could write the details we want in DetailsView and then call the functions in Presenter. After that we could reach to the model to save all the information wanted.
+
+#### firebaseModel
+In the firebaseModel we have the functions that handle the firebase. FirebaseModelPromise() will be used to get the information from the firebase and will be called every time a user signs in to the page. UpdateFirebaseFromModel(model) will be used to save the player that has been added to the team and will be called when the user adds a player to the team.
+
+#### SignInView & SignUpView & SignInPresenter
+In these files, we create the functions and other code that will need so a user will able to sign up and sign in on the page.  
 
 ## Project setup
 ```
