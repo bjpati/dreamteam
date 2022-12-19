@@ -2,7 +2,6 @@
 import DetailsView from "../views/detailsView";
 
 function Details(props){
-    console.log(props.model.players);
     if (props.model.detailsPointer){
         return (
             <DetailsView class="details"

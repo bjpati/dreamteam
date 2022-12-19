@@ -5,8 +5,6 @@ function SearchResultsView(props) {
 
     function playerACB(player){
         function choosePlayerCB(){
-            // console.log("hasan");
-            console.log(player);
             props.choosePlayer(player);
             window.location.hash = "#stadion";
           }

@@ -19,8 +19,13 @@ function DetailsView(props){
                     <br/>
                     Red: {props.playerDetailsToDisplay.statistics[0].cards.red}
                 </p>
+                <button onClick={backToStadionACB} class="cancelbtn" >Back</button>
         </div>
     ); 
+
+    function backToStadionACB(){
+        window.location.hash = "#stadion";
+    }
 
 };
 

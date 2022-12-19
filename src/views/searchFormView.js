@@ -18,13 +18,17 @@ function SearchFormView(props) {
     function showLeaguesACB(league){
         return <option>{league.league}</option>
     }
+    function backToStadionACB(){
+        window.location.hash = "#stadion";
+    }
 
 
     return (
         <div>
             <input onChange={searchTextACB}></input>
             <select optionValue = {chooseLeagueACB} > <option value=""> Choose League</option> {props.league.map(showLeaguesACB)} </select>
-            <button onClick={searchButtonACB}>Search!</button>
+            <button onClick={searchButtonACB} class="serachbtnn">Search!</button>
+            <button onClick={backToStadionACB} class="cancelbtnn">Back</button>
            
         </div>
 
