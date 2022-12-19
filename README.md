@@ -23,6 +23,9 @@ The purpose of these files is to handle the search process. The search process m
 #### DetialsView & DetialsPresenter
 These files are used to display player details retrieved from the API. The API offers many details but the group decided to show the ones they feel are important to a user. In the same way as searchResultsView, searchFormView and searchPresenter, we could write the details we want in DetailsView and then call the functions in Presenter. After that we could reach to the model to save all the information wanted.
 
+#### firebaseModel
+In the firebaseModel we have the functions that handle the firebase. FirebaseModelPromise() will be used to get the information from the firebase and will be called every time a user signs in to the page. UpdateFirebaseFromModel(model) will be used to save the player that has been added to the team and will be called when the user adds a player to the team.
+
 ## Project setup
 ```
 npm install
