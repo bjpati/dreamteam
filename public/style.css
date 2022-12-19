@@ -22,9 +22,9 @@
     border-style: solid;
 }
 .attacker{
-    margin-left: 10%;
+    margin-left: 8%;
     margin-right: 10%;
-    margin-top: 20%;
+    margin-top: 15%;
     display: flex;                  /* establish flex container */
     flex-direction: row;            /* default value; can be omitted */
     flex-wrap: nowrap;              /* default value; can be omitted */
@@ -33,7 +33,7 @@
   
 }
 .midFilder{
-    margin-top: 10%;
+    margin-top: 3%;
     display: flex;                  /* establish flex container */
     flex-direction: row;            /* default value; can be omitted */
     flex-wrap: nowrap;              /* default value; can be omitted */
@@ -42,9 +42,9 @@
     
 }
 .defender{
-    margin-left: 4%;
+    margin-left: -6%;
     margin-right: 7%;
-    margin-top: 9%;
+    margin-top: 5%;
     display: flex;                  /* establish flex container */
     flex-direction: row;            /* default value; can be omitted */
     flex-wrap: nowrap;              /* default value; can be omitted */
@@ -52,8 +52,8 @@
 
 }
 .goalKeeper{
-    margin-left: 38%;
-    margin-top: 10%;
+    margin-left: 1%;
+    margin-top: -5%;
 }
 
 .choosePlayer{
@@ -126,3 +126,107 @@
 .hidden{
     display: none;
   }
+.welcomePage{
+    border-style: solid;
+    border-width: 3px;
+    background-color:red;
+  }
+  .signinForm{
+    margin-top:50px;
+   margin-left: 650px;
+   
+  }
+  .signupForm{
+    padding: 16px;
+
+    margin-top:50px;
+  margin-left: 550px;
+  }
+  
+
+
+
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #2aa39d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #e4685ffc;
+}
+.cancelbtnn{
+  padding: 14px 20px;
+  background-color: #e4685ffc;
+  width: 30%;
+  display: inline;
+}
+.serachbtnn{
+  padding: 14px 20px;
+  background-color: #2aa39d;
+  width: 70%;
+  display: inline;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+  
+}
+
+
+/* Clear floats */
+.signbtn::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}
+
