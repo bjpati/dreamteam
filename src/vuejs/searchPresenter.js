@@ -28,9 +28,6 @@ const Search={
         testACB(player){
             this.message.addToTeam(player);
          }
-        // updateSearchResult(player){
-        //     this.message.setCurrentPlayer(player.id);
-        //  } 
         
        
      },
@@ -51,5 +48,3 @@ const Search={
     };
 
     export default Search;
-
-    //  onSearchResult={this.updateSearchResult}

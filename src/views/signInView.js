@@ -14,12 +14,10 @@ function stadionCB(){
   let psw1 = document.getElementById('psw').value;
 
 
-signInWithEmailAndPassword(getAuth(), userEmail, psw1)
-  .then((tests) => {
+signInWithEmailAndPassword(getAuth(), userEmail, psw1).then((tests) => {
 const promise1 = Promise.resolve(firebaseModelPromise());
 promise1.then((value) => {
   props.getPlayers(value);
-  console.log(value);
 })
 
 window.location.hash = "#stadion"
@@ -34,11 +32,29 @@ window.location.hash = "#stadion"
 
 return (
 <div class="signinForm">
-    <p class="welcomePage" > HERE will we write information about the page</p>
+    <p class="welcomePage" ><h3>Welcome to DreamTeam</h3>
+    <p>
+    To use website: 
+    </p>
+    <ul>
+      <li>
+        You have to sign up or to sign in if you already have an account.
+      </li>
+      <li>
+        Choose your own player by click the plus button in the stadion. 
+      </li>
+      <li>
+        Click once on player to show the details
+      </li>
+      <li>
+        To replace the player, you can drag the player which you have already in stadion. 
+      </li>
+    </ul>
+    </p>
     <div class="imgcontainer">
-    <img src="https://media.istockphoto.com/id/1202466316/photo/football-player-in-the-stadium.jpg?s=612x612&w=0&k=20&c=Ksh1P1leYpL3Y3-hBlUasljBV0W0MOihtKtfhOajsGw=" class="avatar"/>
+    <img src="https://images.thestar.com/duvLr7tdpMrWyb9mWARrfI3MpP8=/1280x1024/smart/filters:cb(1671409721634)/https://www.thestar.com/content/dam/thestar/sports/worldcup/2022/12/18/best-world-cup-final-ever-sport-superstars-delighted-by-messi-mbapp/lionel_messi.jpg" class="avatar"/>
   </div>
-
+  {/* Inspiration of signin design from "www.w3schools.com" */}
   <div class="container">
     <label><b>Email</b></label>
     <input id="uname" type="text" placeholder="Enter your email" name="uname" required/>

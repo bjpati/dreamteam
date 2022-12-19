@@ -34,10 +34,6 @@ function SearchFormView(props) {
 
     )
 
-
-
-
-
 }
 
 export default SearchFormView;

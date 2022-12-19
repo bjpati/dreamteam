@@ -92,6 +92,7 @@
     height: 90vh;
     flex-wrap: wrap;
     width: 100%;
+    justify-content:  center;
 }
 .searchResults{
     margin: 5px;
@@ -129,23 +130,26 @@
 .welcomePage{
     border-style: solid;
     border-width: 3px;
-    background-color:red;
+    border: none;
+    opacity: 0.9;
   }
-  .signinForm{
-    margin-top:50px;
-   margin-left: 650px;
-   
+  
+.signinForm{
+  margin-top:50px;
+  margin-left: 650px;
+  background-position: center; 
   }
-  .signupForm{
-    padding: 16px;
 
-    margin-top:50px;
+.signupForm{
+  padding: 16px;
+  margin-top:50px;
   margin-left: 550px;
   }
   
-
-
-
+.avatar{
+  height: auto;
+  width: 90%;
+}
 * {box-sizing: border-box}
 
 /* Full-width input fields */

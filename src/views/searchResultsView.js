@@ -1,8 +1,6 @@
 /* eslint-disable */
 
 function SearchResultsView(props) {
-    
-
     function playerACB(player){
         function choosePlayerCB(){
             props.choosePlayer(player);
@@ -16,13 +14,8 @@ function SearchResultsView(props) {
           <div class="playerName">{player.player.name} </div>
           <button onClick={choosePlayerCB}>Add player!</button>
         </div>  
-    )
-
-  
-    
+    ) 
     }
-    
-   
     
     return(
         <div class="SerachResultArray" >

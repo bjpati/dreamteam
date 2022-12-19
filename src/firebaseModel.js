@@ -17,20 +17,15 @@ function firebaseModelPromise(){
   const auth = getAuth();
   const user = auth.currentUser;
   const dbRef = ref(getDatabase());
-      // User is signed in, see docs for a list of available properties
-      // https://firebase.google.com/docs/reference/js/firebase.User
-      const uid = user.uid;
-      console.log(uid);
-      let x = get(child(dbRef, `users/${user.uid}`)).then((snapshot) => {
+      let getPlayers = get(child(dbRef, `users/${user.uid}`)).then((snapshot) => {
         if (snapshot.exists()) {
           dreamTeam = (snapshot.val().players);
           return dreamTeam;
-        
         } else {
-          console.log("No data available");
+          return dreamTeam;
         }
       })
-      return x; 
+      return getPlayers; 
 }
 
 
@@ -41,7 +36,6 @@ function updateFirebaseFromModel(model) {
   const auth = getAuth();
   const user = auth.currentUser;
   const db = getDatabase();
-
   if (payload && payload.addPlayer){
     if (user){
       set(ref(db, "users/" + user.uid), {

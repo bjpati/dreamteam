@@ -19,7 +19,7 @@ const Show={
             window.removeEventListener("hashchange",  this.hashListenerACB);
         }
         ,
-    render(){return<div class= {(this.checkThehashState())?"":"hidden"}>{this.$slots.default()}</div>},
+    render(){return<div class= {(this.checkThehashState())? "":"hidden"}>{this.$slots.default()}</div>},
      };
     export default Show;
     

@@ -58,7 +58,6 @@ function StadionView(props){
           function searchPlayerACB(){
             props.changePointer(index);
             window.location.hash = "#search";
-            //test(index);
 
                   
           }

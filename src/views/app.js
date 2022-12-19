@@ -22,14 +22,9 @@ function hashCB(){
   window.location.hash="#stadion"
 }
 
-if ( (window.location.hash !=="#stadion")
-|| (window.location.hash !=="#search")|| 
-(window.location.hash !=="#details"))
-    window.location.hash = "#signin"
-
 export default function App (props) {
     return (
-      <div>
+      <div >
       <h1 class="title">Your Dream Team</h1>
       <div class="flexParent">
         <Show hash="#signin"><SignInView model={props.model}/></Show>

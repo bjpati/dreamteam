@@ -33,7 +33,7 @@ function signInCB(){
 return (
 <div id= "test" class="signupForm">
 <div class="imgcontainer">
-    <img src="https://media.istockphoto.com/id/1202466316/photo/football-player-in-the-stadium.jpg?s=612x612&w=0&k=20&c=Ksh1P1leYpL3Y3-hBlUasljBV0W0MOihtKtfhOajsGw=" alt="Avatar" class="avatar"/>
+    <img src="https://images.thestar.com/duvLr7tdpMrWyb9mWARrfI3MpP8=/1280x1024/smart/filters:cb(1671409721634)/https://www.thestar.com/content/dam/thestar/sports/worldcup/2022/12/18/best-world-cup-final-ever-sport-superstars-delighted-by-messi-mbapp/lionel_messi.jpg" alt="Avatar" class="avatar"/>
   </div> 
     <h1>Sign Up</h1>
     <p>Please fill in this form to create an account.</p>
@@ -60,5 +60,3 @@ return (
 
 };
 export default SignUpView;
-
-//https://www.w3schools.com/howto/howto_css_login_form.asp
