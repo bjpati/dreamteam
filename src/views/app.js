@@ -7,7 +7,7 @@
  * @returns all components and pages that will be shown in the website...
  */
 
-import writeUserData from "/src/firebaseModel"
+import writeUserData from "../Model/firebaseModel"
 
 const Stadion=require("../vuejs/stadionPresenter.js").default;
 const Search=require("../vuejs/searchPresenter.js").default;

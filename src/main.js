@@ -4,7 +4,7 @@ import { render, h } from "vue";
 
 window.React = { createElement: h };
 import { initializeApp } from "firebase/app";
-import firebaseConfig from './firebaseConfig';
+import firebaseConfig from '../src/Model/firebaseConfig';
 
 // Initialize Firebase Authentication and get a reference to the service
 initializeApp(firebaseConfig);
