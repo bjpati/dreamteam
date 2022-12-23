@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { getDatabase, ref, set , child, get} from "firebase/database";
-import { firebaseModelPromise} from "../firebaseModel";
+import { firebaseModelPromise} from "../Model/firebaseModel";
 
 
 function SignInView(props){

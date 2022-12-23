@@ -2,7 +2,7 @@
 
 import DreamTeam from '@/DreamTeam.js'
 import App from '../views/app.js'
-import {updateFirebaseFromModel } from "../firebaseModel";
+import {updateFirebaseFromModel } from "../Model/firebaseModel";
 
 
 /**
